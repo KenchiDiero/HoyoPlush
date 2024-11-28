@@ -1,0 +1,201 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #333;
+}
+
+nav h1 {
+    color: #00bcd4;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #1c1c1c, #333);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.hero .about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.hero .about button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .about button:hover {
+    background-color: #0097a7;
+}
+
+.hero .image {
+    flex: 1;
+}
+
+.hero .image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Product Catalog */
+.productCatalog {
+    margin-top: 3rem;
+}
+
+/* Individual Product Section */
+.product {
+    background-color: #1f1f1f;
+    margin: 2rem 0;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+/* Catalog Header */
+.catalog {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.catalog .designCategory h1 {
+    font-size: 2rem;
+    color: #00bcd4;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+/* Product Body (5 items per row) */
+.productBody {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* Product Card */
+.productDetails {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.productDetails img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.productDetails .details h1 {
+    font-size: 1.25rem;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+}
+
+.productDetails .details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Button Styling */
+.productDetails button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Keeps the button at the bottom */
+    align-self: center; /* Horizontally centers the button */
+}
+
+.productDetails button:hover {
+    background-color: #0097a7;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1200px) {
+    .productBody {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .productBody {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .productBody {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+@media (max-width: 400px) {
+    .productBody {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+}
